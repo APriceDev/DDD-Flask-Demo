@@ -1,6 +1,6 @@
 # DDD-Flask-Demo
 
-Demo of the Flask Application Framework for Python
+Demo of the Flask Micro Web Framework
 
 ## The Setup
 
