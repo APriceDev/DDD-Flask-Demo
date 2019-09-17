@@ -123,7 +123,6 @@ if __name__ == '__main__':
 
 ### Jinja2
 
-
 ### Template inheritance
 
 Create parent template that the others will inherit from.

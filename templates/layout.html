@@ -20,10 +20,10 @@
   <body>
     <nav class="red accent-4">
       <div class="nav-wrapper">
-        <a href="/" class="brand-logo">Developer Deep Dives</a>
+        <a href="/" class="brand-logo center">Developer Deep Dives</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="{{url_for('home')}}">Home</a></li>
+          <li><a href="{{url_for('about')}}">About</a></li>
         </ul>
       </div>
     </nav>
