@@ -12,12 +12,11 @@
 
     <div class="row center-align">
       <h5>Sign In</h5>
-      <h6>With your DDD account</h6>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="email_input" name="email_input" type="email" class="validate" />
-        <label for="email_input">Email</label>
+        <input id="username_input" name="username_input" type="text" class="validate" />
+        <label for="username_input">Username</label>
       </div>
     </div>
     <div class="row">
@@ -25,13 +24,12 @@
         <input id="password_input" name="password_input" type="password" class="validate" />
         <label for="password_input">Password</label>
         <div>
-          <a href="/"><b>Forgot Password?</b></a>
+          <a href="{{url_for('register')}}"><b>Create Account</b></a>
         </div>
       </div>
     </div>
     <div class="row center-align">
       <button class="waves-effect waves-light red accent-4 btn">Login</button>
-      <!-- <a href="" class="waves-effect waves-light red accent-4 btn">Login</a> -->
     </div>
   </div>
 </form>

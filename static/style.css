@@ -31,3 +31,7 @@ body {
   margin: 0 auto;
   overflow: hidden;
 }
+
+input[type="submit"] {
+  color: white;
+}

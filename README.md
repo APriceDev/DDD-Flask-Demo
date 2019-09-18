@@ -127,3 +127,11 @@ if __name__ == '__main__':
 
 Create parent template that the others will inherit from.
 Block is a section that the child templates can override
+
+## Forms
+
+Using Python classes instead og HTML to create forms.
+
+```bash
+pip install flask-wtf
+```
