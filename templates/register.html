@@ -1,5 +1,5 @@
 {% extends 'layout.html' %} {% block content%}
-<form action="" method="post">
+<form action="{{url_for('register')}}" method="post">
   {{ form.hidden_tag() }}
   <div class="login-div">
     <div class="row">
@@ -27,7 +27,7 @@
       {{ form.password() }}
     </div>
     <div class="row center-align">
-      {{ form.submit(class="waves-effect waves-light red accent-4 btn white-text") }}
+      {{ form.submit(class="waves-effect waves-light red accent-4 btn") }}
     </div>
   </div>
 </form>

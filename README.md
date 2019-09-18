@@ -1,6 +1,6 @@
 # DDD-Flask-Demo
 
-Demo of the Flask Micro Web Framework
+The Flask Micro Web Framework; a simple, light-weight alternative to creating static websites.
 
 ## The Setup
 
@@ -39,7 +39,7 @@ app = Flask(__name__)
 # both routes handled by the same function
 @app.route("/")
 @app.route("/home")
-def hello():
+def home():
     return "<h1>Flask Demo</h1>"
 
 
@@ -94,13 +94,13 @@ if __name__ == '__main__':
   app.run(debug=True)
 ```
 
-## Templates
+## Templates and static files
 
 Flask will by default look for HTML and related files in the templates folder.
 
-In the app file, import render template from flask.
+In the app file, import render template from Flask.
 
-js/css files go into the static folder if neccessary.
+js/css files can go into the static folder if neccessary.
 
 ```bash
 from flask import Flask, render_template
@@ -109,8 +109,8 @@ app = Flask(__name__)
 
 @app.route("/")
 @app.route("/home")
-def hello():
-    return render_template('index.html')
+def home():
+    return render_template('login.html')
 
 
 @app.route("/about")
@@ -121,17 +121,45 @@ if __name__ == '__main__':
   app.run(debug=True)
 ```
 
-### Jinja2
+### Jinja2 example
+
+Conditonal logic and looping are also available.
+
+```HTML
+{% extends 'layout.html' %}
+  {% block content%}
+    <h1>Hello DDD</h1>
+    <a href="{{url_for('home')}}">Home</a>
+  {% endblock content %}
+```
 
 ### Template inheritance
 
 Create parent template that the others will inherit from.
 Block is a section that the child templates can override
 
+### Using url_for
+
+Allows for the creation of dynamic links by the templating engine. In this case, Jinja2.
+
+```py
+ <a href="{{ url_for('home', user='foo')}}"></a>
+```
+
 ## Forms
 
 Using Python classes instead og HTML to create forms.
 
+The Flask-WTF plugin provides additiaonal functionality to standqard Flask forms
+
 ```bash
 pip install flask-wtf
+```
+
+From Flask-WTF, we can import wtforms which gives us various filed definitions and validation
+
+```py
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, Email
 ```

@@ -32,6 +32,6 @@ body {
   overflow: hidden;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   color: white;
 }
