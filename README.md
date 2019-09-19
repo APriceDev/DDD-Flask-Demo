@@ -123,7 +123,7 @@ if __name__ == '__main__':
 
 ### Jinja2 example
 
-Conditonal logic and looping are also available.
+Conditional logic and looping are also available.
 
 ```HTML
 {% extends 'layout.html' %}
@@ -150,7 +150,7 @@ Allows for the creation of dynamic links by the templating engine. In this case,
 
 Using Python classes instead og HTML to create forms.
 
-The Flask-WTF plugin provides additiaonal functionality to standqard Flask forms
+The Flask-WTF plugin provides additiaonal functionality to standard Flask forms
 
 ```bash
 pip install flask-wtf
